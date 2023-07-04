@@ -1,0 +1,252 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  /* убираем стили ссылкам */
+}
+
+body {
+  font-family: Arial;
+  font-size: calc(12px + (18 - 12) * ((100vw - 1024px) / (1920 - 1024)));
+
+}
+
+.main_cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+nav {
+  display: flex;
+}
+
+nav div {
+  padding: 0 3vw;
+}
+
+header img {
+  height: 10vh;
+  display: block;
+
+}
+
+
+
+
+.wrapper {
+  width: 90vw;
+
+
+  display: grid;
+  grid-template-areas:
+    /* матрица грид */
+    "i i i i i i i i i i i i"
+    "a a a a a a b b c c d d"
+    "e e e e e e f f f g g g"
+    "e e e e e e f f f g g g"
+    "h h h k k k l l l m m m"
+    "h h h k k k l l l m m m"
+    "j j j j j j j j j j j j";
+}
+
+.wrapper section,
+header,
+footer {
+  padding: 10px;
+  border: 1px rgb(0, 0, 0) solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header,
+footer {}
+
+.A {
+  grid-area: a;
+  background-color: red;
+}
+
+.B {
+  grid-area: b;
+  background-color: orange;
+}
+
+.C {
+  grid-area: c;
+  background-color: yellow;
+}
+
+.D {
+  grid-area: d;
+  background-color: greenyellow;
+}
+
+.E {
+  grid-area: e;
+  background-color: rgb(109, 238, 255);
+}
+
+.F {
+  grid-area: f;
+  background-color: rgb(4, 0, 255);
+}
+
+.G {
+  grid-area: g;
+  background-color: rgb(204, 0, 255);
+}
+
+.H {
+  grid-area: h;
+  background-color: rgb(255, 0, 140);
+}
+
+.K {
+  grid-area: k;
+  background-color: rgb(0, 255, 162);
+}
+
+.L {
+  grid-area: l;
+  background-color: rgb(136, 0, 255);
+}
+
+.M {
+  grid-area: m;
+
+  background-color: rgb(214, 255, 110);
+}
+
+.header {
+  grid-area: i;
+}
+
+.footer {
+  grid-area: j;
+}
+
+
+
+
+@media (max-width:1024px) and (min-width:769px) {
+  .wrapper {
+    grid-template-areas:
+      /* немного меняем матрицу грид */
+      "i i i i i i i i i i i i"
+      "a a a a e e b b c c d d"
+      "a a a a e e f f f g g g"
+      "a a a a e e f f f g g g"
+      "h h h k k k l l l m m m"
+      "h h h k k k l l l m m m"
+      "j j j j j j j j j j j j";
+  }
+
+  body {
+    font-size: calc(10px + (12.5 - 10) * ((100vw - 769px) / (1024 - 769)));
+
+  }
+
+
+
+
+  .wrapper {
+    width: 95vw;
+  }
+
+  .main_cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+
+}
+
+@media (max-width:768px) and (min-width:481px) {
+
+  body {
+    font-size: calc(8px + (11.5 - 8) * ((100vw - 481px) / (768 - 481)));
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-areas:
+      /* немного меняем матрицу грид */
+      "i i i i i i i i i i i i"
+      "a a a a b b b b c c d d"
+      "f f f f f f f f f m m m"
+      "g g g g g g g g g m m m"
+      "h h h k k k l l l m m m"
+      "h h h k k k l l l m m m"
+      "j j j j j j j j j j j j";
+  }
+
+
+
+
+
+  .E {
+    display: none !important;
+
+  }
+
+  .wrapper {
+    width: 90vw;
+  }
+
+  .main_cont {
+    overflow-x: none;
+  }
+
+}
+
+@media (max-width:481px) and (min-width:320px) {
+
+  body {
+    font-size: calc(8px + (10 - 8) * ((100vw - 320px) / (481 - 320)));
+
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-areas:
+      /* немного меняем матрицу грид */
+      "i i i i i i i i i i i i"
+      "b b b b c c c c d d d d"
+      "m m m m m m m m m m m m"
+      "h h h k k k l l l l l l"
+      "h h h k k k l l l l l l"
+      "j j j j j j j j j j j j";
+  }
+
+
+
+  .A,
+  .G,
+  .E,
+  .F {
+    display: none !important;
+
+  }
+
+  .wrapper {
+    min-height: 100vh;
+    width: 100vw;
+  }
+
+  .main_cont {
+    overflow-x: none;
+    display: inline;
+  }
+
+}

@@ -1,0 +1,11 @@
+@import url('index1.css');
+body {
+    background-image: url("1.jpeg");
+    background-repeat: no-repeat;
+    font-family: 'Times New Roman', Times, serif;
+    /* Шрифт текста Times */
+    font-size: 11%;
+    /* Размер текста 11% */
+    color: rgb(17, 0, 128);
+    /* Цвет текста синий */
+}

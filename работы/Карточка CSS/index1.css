@@ -1,0 +1,14 @@
+/* Активная */
+
+a:active {
+    color: orange;
+    text-decoration: none;
+}
+
+
+/* При наведении на нее мыши */
+
+a:hover {
+    color: green;
+    text-decoration: none;
+}
